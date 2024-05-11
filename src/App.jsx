@@ -1,20 +1,23 @@
-import React from "react";
+import React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import createTheme from '@mui/material/styles/createTheme';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
+import Interface from './components/Interface';
 
-// Including the full library in development bundles can slow startup times, particularly with "named imports" from @mui/icons-material, which can be up to six times slower than "default imports". https://mui.com/material-ui/guides/minimizing-bundle-size/ == Concern ==
-
-import UserInterface from "./container/UserInterface";
-
-import "./assets/styles/App.css";
-
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
+const fontsTheme = createTheme({
+  typography: {
+    fontFamily: ['Montserrat', 'sans-serif'].join(','),
+    fontSize: 15
+  }
+});
 
 function App() {
   return (
     <React.Fragment>
-      <UserInterface />
+      <ThemeProvider theme={fontsTheme}>
+        <CssBaseline />
+        <Interface />
+      </ThemeProvider>
     </React.Fragment>
   );
 }
