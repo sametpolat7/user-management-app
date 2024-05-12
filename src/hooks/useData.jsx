@@ -1,4 +1,4 @@
 import { useContext } from 'react';
-import { UsersContext } from '../components/viewModels/InterfaceViewModel';
+import UsersContext from '../context/UsersContext';
 
 export const useData = () => useContext(UsersContext);

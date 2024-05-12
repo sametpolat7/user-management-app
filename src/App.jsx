@@ -7,7 +7,9 @@ import Interface from './components/Interface';
 const fontsTheme = createTheme({
   typography: {
     fontFamily: ['Montserrat', 'sans-serif'].join(','),
-    fontSize: 15
+    fontSize: 14,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600
   }
 });
 

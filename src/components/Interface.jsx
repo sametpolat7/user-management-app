@@ -1,9 +1,8 @@
-import React, { createContext } from 'react';
+import UsersContext from '../context/UsersContext';
 import Container from '@mui/material/Container';
 import NavbarViewModel from './viewModels/UserDatatable/Navbar.ViewModel';
 import SearchBarViewModel from './viewModels/UserDatatable/SearchBarViewModel';
-
-export const UsersContext = createContext();
+import UserTableViewModel from './viewModels/UserDatatable/UserTableViewModel';
 
 function Interface() {
   return (
@@ -11,6 +10,7 @@ function Interface() {
       <Container>
         <NavbarViewModel />
         <SearchBarViewModel />
+        <UserTableViewModel />
       </Container>
     </UsersContext.Provider>
   );
