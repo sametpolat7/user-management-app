@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -10,72 +9,26 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import avatars from '../../../assets/images/avatar/avatars';
 
-function UserTable() {
-  const [selectAll, setSelectAll] = useState(false);
-
-  const handleSelectAll = () => {
-    setSelectAll(!selectAll);
-  };
-
-  const users = [
-    {
-      id: 1,
-      avatar: 'https://example.com/avatar1.jpg',
-      name: 'John Doe',
-      username: 'johndoe',
-      email: 'johndoe@example.com',
-      role: 'Admin'
-    },
-    {
-      id: 2,
-      avatar: 'https://example.com/avatar2.jpg',
-      name: 'Jane Smith',
-      username: 'janesmith',
-      email: 'janesmith@example.com',
-      role: 'User'
-    },
-    {
-      id: 3,
-      avatar: 'https://example.com/avatar1.jpg',
-      name: 'John Doe',
-      username: 'johndoe',
-      email: 'johndoe@example.com',
-      role: 'Admin'
-    },
-    {
-      id: 4,
-      avatar: 'https://example.com/avatar2.jpg',
-      name: 'Jane Smith',
-      username: 'janesmith',
-      email: 'janesmith@example.com',
-      role: 'User'
-    },
-    {
-      id: 5,
-      avatar: 'https://example.com/avatar1.jpg',
-      name: 'John Doe',
-      username: 'johndoe',
-      email: 'johndoe@example.com',
-      role: 'Admin'
-    },
-    {
-      id: 6,
-      avatar: 'https://example.com/avatar2.jpg',
-      name: 'Jane Smith',
-      username: 'janesmith',
-      email: 'janesmith@example.com',
-      role: 'User'
-    }
-  ];
-
+function UserTable({
+  selectedUsers,
+  users,
+  handleSelectAll,
+  handleSelectOne,
+  handleEdit,
+  handleDelete
+}) {
   return (
     <TableContainer>
       <Table>
         <TableHead>
           <TableRow sx={{ backgroundColor: '#F5F5F7' }}>
             <TableCell sx={{ padding: '0 16px' }}>
-              <Checkbox checked={selectAll} onChange={handleSelectAll} />
+              <Checkbox
+                checked={selectedUsers.length === users.length}
+                onChange={handleSelectAll}
+              />
             </TableCell>
             <TableCell>Avatar</TableCell>
             <TableCell>Name</TableCell>
@@ -87,22 +40,31 @@ function UserTable() {
         </TableHead>
         <TableBody>
           {users.map((user) => (
-            <TableRow key={user.id}>
+            <TableRow
+              key={user.id}
+              sx={{
+                backgroundColor: selectedUsers.includes(user.id)
+                  ? '#F5F5F7'
+                  : 'transparent'
+              }}>
               <TableCell>
-                <Checkbox />
+                <Checkbox
+                  checked={selectedUsers.includes(user.id)}
+                  onChange={() => handleSelectOne(user.id)}
+                />
               </TableCell>
               <TableCell>
-                <Avatar src={user.avatar} />
+                <Avatar src={avatars[user.avatarId]} variant='rounded' />
               </TableCell>
-              <TableCell>{user.name}</TableCell>
-              <TableCell>{user.username}</TableCell>
+              <TableCell>{user.fullName}</TableCell>
+              <TableCell>{user.id}</TableCell>
               <TableCell>{user.email}</TableCell>
               <TableCell>{user.role}</TableCell>
               <TableCell>
-                <IconButton>
+                <IconButton onClick={() => handleEdit(user.id)}>
                   <EditIcon />
                 </IconButton>
-                <IconButton>
+                <IconButton onClick={() => handleDelete(user.id)}>
                   <DeleteIcon />
                 </IconButton>
               </TableCell>

@@ -5,28 +5,28 @@
       "fullName": "Kore Frostick",
       "email": "kfrostick0@bbb.org",
       "role": "Administrator",
-      "avatarId": 4
+      "avatarId": 3
     },
     {
       "id": "haganbecke",
       "fullName": "Hagan Becke",
       "email": "hbecke1@meetup.com",
       "role": "Contributor",
-      "avatarId": 4
+      "avatarId": 0
     },
     {
       "id": "nannieclemont",
       "fullName": "Nannie Clemont",
       "email": "nclemont2@ca.gov",
       "role": "Contributor",
-      "avatarId": 5
+      "avatarId": 3
     },
     {
       "id": "fannyeggar",
       "fullName": "Fanny Eggar",
       "email": "feggar3@vistaprint.com",
       "role": "Author",
-      "avatarId": 2
+      "avatarId": 0
     },
     {
       "id": "arnicrennell",
@@ -39,8 +39,8 @@
       "id": "suzannemchugh",
       "fullName": "Suzanne McHugh",
       "email": "smchugh5@jalbum.net",
-      "role": "Subscribe",
-      "avatarId": 2
+      "role": "Subscriber",
+      "avatarId": 3
     },
     {
       "id": "sharlabesson",
@@ -68,7 +68,7 @@
       "fullName": "Gene Eskrigge",
       "email": "geskrigge9@paypal.com",
       "role": "Author",
-      "avatarId": 2
+      "avatarId": 0
     },
     {
       "id": "barbdupoy",
@@ -81,15 +81,15 @@
       "id": "ninnettabridgeman",
       "fullName": "Ninnetta Bridgeman",
       "email": "nbridgemanb@google.ru",
-      "role": "Subscribe",
+      "role": "Subscriber",
       "avatarId": 5
     },
     {
       "id": "lilliscapp",
       "fullName": "Lillis Capp",
       "email": "lcappc@flickr.com",
-      "role": "Subscribe",
-      "avatarId": 2
+      "role": "Subscriber",
+      "avatarId": 3
     },
     {
       "id": "mosheduncan",
@@ -102,7 +102,7 @@
       "id": "raffartyvanderweedenburg",
       "fullName": "Raffarty Van Der Weedenburg",
       "email": "rvane@samsung.com",
-      "role": "Subscribe",
+      "role": "Subscriber",
       "avatarId": 3
     },
     {
@@ -116,7 +116,7 @@
       "id": "kimberlymewrcik",
       "fullName": "Kimberly Mewrcik",
       "email": "kmewrcikg@opensource.org",
-      "role": "Subscribe",
+      "role": "Subscriber",
       "avatarId": 2
     },
     {
@@ -124,21 +124,21 @@
       "fullName": "Corrinne Eates",
       "email": "ceatesh@i2i.jp",
       "role": "Author",
-      "avatarId": 6
+      "avatarId": 0
     },
     {
       "id": "angelikaekless",
       "fullName": "Angelika Ekless",
       "email": "aeklessi@usgs.gov",
-      "role": "Subscribe",
-      "avatarId": 6
+      "role": "Subscriber",
+      "avatarId": 0
     },
     {
       "id": "allidran",
       "fullName": "Alli Dran",
       "email": "adranj@example.com",
-      "role": "Subscribe",
-      "avatarId": 6
+      "role": "Subscriber",
+      "avatarId": 0
     },
     {
       "id": "paulopagan",
@@ -166,7 +166,7 @@
       "fullName": "Leonie Dabnor",
       "email": "ldabnorn@arizona.edu",
       "role": "Administrator",
-      "avatarId": 6
+      "avatarId": 0
     },
     {
       "id": "thachercapel",
@@ -186,14 +186,14 @@
       "id": "dyanefletcher",
       "fullName": "Dyane Fletcher",
       "email": "dfletcherq@scribd.com",
-      "role": "Subscribe",
+      "role": "Subscriber",
       "avatarId": 3
     },
     {
       "id": "graceproudman",
       "fullName": "Grace Proudman",
       "email": "gproudmanr@ftc.gov",
-      "role": "Subscribe",
+      "role": "Subscriber",
       "avatarId": 2
     },
     {
@@ -208,7 +208,7 @@
       "fullName": "Inglebert Welland",
       "email": "iwellandt@yale.edu",
       "role": "Author",
-      "avatarId": 6
+      "avatarId": 0
     },
     {
       "id": "vergilboud",
@@ -235,7 +235,7 @@
       "id": "laneygottschalk",
       "fullName": "Laney Gottschalk",
       "email": "lgottschalkx@naver.com",
-      "role": "Subscribe",
+      "role": "Subscriber",
       "avatarId": 5
     },
     {
@@ -243,21 +243,21 @@
       "fullName": "Page Iacopini",
       "email": "piacopiniy@histats.com",
       "role": "Administrator",
-      "avatarId": 6
+      "avatarId": 0
     },
     {
       "id": "onfrearchanbault",
       "fullName": "Onfre Archanbault",
       "email": "oarchanbaultz@chron.com",
-      "role": "Subscribe",
+      "role": "Subscriber",
       "avatarId": 3
     },
     {
       "id": "rubenhannant",
       "fullName": "Ruben Hannant",
       "email": "rhannant10@addtoany.com",
-      "role": "Subscribe",
-      "avatarId": 6
+      "role": "Subscriber",
+      "avatarId": 0
     },
     {
       "id": "jarradgiacomello",
@@ -298,7 +298,7 @@
       "id": "geromegorelli",
       "fullName": "Gerome Gorelli",
       "email": "ggorelli16@pinterest.com",
-      "role": "Subscribe",
+      "role": "Subscriber",
       "avatarId": 3
     } 
   ]

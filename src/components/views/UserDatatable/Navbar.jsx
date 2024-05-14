@@ -4,10 +4,10 @@ import Tab from '@mui/material/Tab';
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
-import usersNav from '../../../assets/images/icons/usersNav.svg';
+import navbarIcon from '../../../assets/images/icons/navbar-icon.svg';
 import Divider from '@mui/material/Divider';
 
-function Navbar({ value, handleChange }) {
+function Navbar({ activeTab, handleTabChange, handleAddUser }) {
   return (
     <>
       <Box
@@ -19,26 +19,18 @@ function Navbar({ value, handleChange }) {
           padding: '20px'
         }}>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <img src={usersNav} alt='Brand Icon' />
-          <Typography
-            variant='h6'
-            sx={{
-              fontWeight: 600,
-              color: '#3A3C40',
-              marginLeft: '1rem'
-            }}>
+          <img src={navbarIcon} alt='Brand Icon' />
+          <Typography variant='h6' sx={{ marginLeft: '1rem' }}>
             Users
           </Typography>
         </Box>
         <Box>
           <Tabs
-            value={value}
-            onChange={handleChange}
-            centered
+            value={activeTab}
+            onChange={(event, newTab) => handleTabChange(newTab)}
             sx={{
               '& .MuiTab-root': {
-                textTransform: 'none', // Override the default uppercase styling for all tabs
-                fontWeight: 600
+                textTransform: 'none' // Override the default uppercase styling for all tabs
               }
             }}>
             <Tab label='All Users' />
@@ -50,10 +42,10 @@ function Navbar({ value, handleChange }) {
         </Box>
         <Box>
           <Button
+            onClick={handleAddUser}
             variant='contained'
             startIcon={<AddIcon />}
             sx={{
-              fontWeight: 600,
               textTransform: 'none',
               fontSize: '13px',
               padding: '0.75rem 1rem'
