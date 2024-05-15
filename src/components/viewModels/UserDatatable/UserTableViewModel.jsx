@@ -5,12 +5,13 @@ import UserTable from '../../views/UserDatatable/UserTable';
 function UserTableViewModel() {
   const [selectedUsers, setSelectedUsers] = useState([]);
 
-  const { filteredUsers } = useData();
-  const users = filteredUsers();
+  const { listedUsers } = useData();
 
   const handleSelectAll = () => {
     setSelectedUsers(
-      selectedUsers.length === users.length ? [] : users.map((user) => user.id)
+      selectedUsers.length === listedUsers.length
+        ? []
+        : listedUsers.map((user) => user.id)
     );
   };
 
@@ -35,7 +36,7 @@ function UserTableViewModel() {
   return (
     <UserTable
       selectedUsers={selectedUsers}
-      users={users}
+      listedUsers={listedUsers}
       handleSelectAll={handleSelectAll}
       handleSelectOne={handleSelectOne}
       handleEdit={handleEdit}

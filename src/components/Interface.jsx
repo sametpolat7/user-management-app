@@ -1,40 +1,54 @@
-import React, { useState } from 'react';
-import db from '../model/data/db.json';
+import React, { useState, useEffect } from 'react';
+import database from '../model/data/db.json';
 import UsersContext from '../context/UsersContext';
 import Container from '@mui/material/Container';
 import NavbarViewModel from './viewModels/UserDatatable/NavbarViewModel';
-import SearchBarViewModel from './viewModels/UserDatatable/SearchBarViewModel';
 import UserTableViewModel from './viewModels/UserDatatable/UserTableViewModel';
+import SearchBarViewModel from './viewModels/UserDatatable/SearchBarViewModel';
+
+const initialUsersData = database.users;
 
 function Interface() {
-  const users = db.users;
-
+  const [users, setUsers] = useState(initialUsersData);
+  const [filteredUsersByTab, setFilteredUsersByTab] = useState(users);
+  const [listedUsers, setListedUsers] = useState(filteredUsersByTab);
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabChange = (newTab) => {
     setActiveTab(newTab);
   };
 
-  const filteredUsers = () => {
-    switch (activeTab) {
-      case 0:
-        return users;
-      case 1:
-        return users.filter((user) => user.role === 'Contributor');
-      case 2:
-        return users.filter((user) => user.role === 'Author');
-      case 3:
-        return users.filter((user) => user.role === 'Administrator');
-      case 4:
-        return users.filter((user) => user.role === 'Subscriber');
-      default:
-        return users;
+  useEffect(() => {
+    filterUsers(activeTab);
+  }, [activeTab]);
+
+  const filterUsers = (tabIndex) => {
+    if (tabIndex === 0) {
+      const allUsers = users;
+      setFilteredUsersByTab(allUsers);
+    } else if (tabIndex === 1) {
+      const contributors = users.filter((user) => user.role === 'Contributor');
+      setFilteredUsersByTab(contributors);
+    } else if (tabIndex === 2) {
+      const authors = users.filter((user) => user.role === 'Author');
+      setFilteredUsersByTab(authors);
+    } else if (tabIndex === 3) {
+      const administrators = users.filter(
+        (user) => user.role === 'Administrator'
+      );
+      setFilteredUsersByTab(administrators);
+    } else if (tabIndex === 4) {
+      const subscribers = users.filter((user) => user.role === 'Subscriber');
+      setFilteredUsersByTab(subscribers);
+    } else {
+      console.error('Interface');
     }
   };
 
   const commonData = {
-    users,
-    filteredUsers
+    filteredUsersByTab,
+    listedUsers,
+    setListedUsers
   };
 
   return (
