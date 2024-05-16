@@ -6,9 +6,9 @@ import NavbarViewModel from './viewModels/UserDatatable/NavbarViewModel';
 import UserTableViewModel from './viewModels/UserDatatable/UserTableViewModel';
 import SearchBarViewModel from './viewModels/UserDatatable/SearchBarViewModel';
 
-const initialUsersData = database.users;
-
 function Interface() {
+  const initialUsersData = database.users;
+
   const [users, setUsers] = useState(initialUsersData);
   const [filteredUsersByTab, setFilteredUsersByTab] = useState(users);
   const [listedUsers, setListedUsers] = useState(filteredUsersByTab);
@@ -17,6 +17,15 @@ function Interface() {
   const handleTabChange = (newTab) => {
     setActiveTab(newTab);
   };
+
+  // Synchronous updating of statuses is guaranteed. (Status updates may not be synchronous.)
+  useEffect(() => {
+    setFilteredUsersByTab(users);
+  }, [users]);
+
+  useEffect(() => {
+    setListedUsers(filteredUsersByTab);
+  }, [filteredUsersByTab]);
 
   useEffect(() => {
     filterUsers(activeTab);
@@ -46,6 +55,8 @@ function Interface() {
   };
 
   const commonData = {
+    users,
+    setUsers,
     filteredUsersByTab,
     listedUsers,
     setListedUsers

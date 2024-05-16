@@ -31,7 +31,7 @@
     {
       "id": "arnicrennell",
       "fullName": "Arni Crennell",
-      "email": "acrennell4@businessweek.com",
+      "email": "acrennell4@business.com",
       "role": "Contributor",
       "avatarId": 5
     },
@@ -52,7 +52,7 @@
     {
       "id": "margarethepiens",
       "fullName": "Margarethe Piens",
-      "email": "mpiens7@cocolog-nifty.com",
+      "email": "mpiens7@cocolog.com",
       "role": "Author",
       "avatarId": 5
     },
@@ -78,8 +78,8 @@
       "avatarId": 3
     },
     {
-      "id": "ninnettabridgeman",
-      "fullName": "Ninnetta Bridgeman",
+      "id": "ninnetbridg",
+      "fullName": "Ninnet Bridg",
       "email": "nbridgemanb@google.ru",
       "role": "Subscriber",
       "avatarId": 5
@@ -99,13 +99,6 @@
       "avatarId": 1
     },
     {
-      "id": "raffartyvanderweedenburg",
-      "fullName": "Raffarty Van Der Weedenburg",
-      "email": "rvane@samsung.com",
-      "role": "Subscriber",
-      "avatarId": 3
-    },
-    {
       "id": "fiorenzegetten",
       "fullName": "Fiorenze Getten",
       "email": "fgettenf@vk.com",
@@ -115,7 +108,7 @@
     {
       "id": "kimberlymewrcik",
       "fullName": "Kimberly Mewrcik",
-      "email": "kmewrcikg@opensource.org",
+      "email": "kmewrcikg@source.org",
       "role": "Subscriber",
       "avatarId": 2
     },
@@ -150,14 +143,14 @@
     {
       "id": "leighaensten",
       "fullName": "Leigha Ensten",
-      "email": "lenstenl@chronoengine.com",
+      "email": "lenstenl@chrono.com",
       "role": "Contributor",
       "avatarId": 5
     },
     {
       "id": "deegranleese",
       "fullName": "Dee Granleese",
-      "email": "dgranleesem@seattletimes.com",
+      "email": "dgranleesem@times.com",
       "role": "Contributor",
       "avatarId": 0
     },
@@ -269,7 +262,7 @@
     {
       "id": "britbockmaster",
       "fullName": "Brit Bockmaster",
-      "email": "bbockmaster12@cocolog-nifty.com",
+      "email": "bbockmaster12@coco.com",
       "role": "Contributor",
       "avatarId": 5
     },
