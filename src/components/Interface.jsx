@@ -5,6 +5,7 @@ import Container from '@mui/material/Container';
 import NavbarViewModel from './viewModels/UserDatatable/NavbarViewModel';
 import UserTableViewModel from './viewModels/UserDatatable/UserTableViewModel';
 import SearchBarViewModel from './viewModels/UserDatatable/SearchBarViewModel';
+import FeedbackViewModel from './viewModels/Modals/FeedbackModal/FeedbackViewModel';
 
 function Interface() {
   const initialUsersData = database.users;
@@ -13,6 +14,7 @@ function Interface() {
   const [filteredUsersByTab, setFilteredUsersByTab] = useState(users);
   const [listedUsers, setListedUsers] = useState(filteredUsersByTab);
   const [activeTab, setActiveTab] = useState(0);
+  const [error, setError] = useState(null); // For new registration
 
   const handleTabChange = (newTab) => {
     setActiveTab(newTab);
@@ -59,7 +61,8 @@ function Interface() {
     setUsers,
     filteredUsersByTab,
     listedUsers,
-    setListedUsers
+    setListedUsers,
+    setError
   };
 
   return (
@@ -71,6 +74,7 @@ function Interface() {
         />
         <SearchBarViewModel />
         <UserTableViewModel />
+        <FeedbackViewModel error={error} />
       </Container>
     </UsersContext.Provider>
   );
