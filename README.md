@@ -3,12 +3,12 @@ This is a user management application developed using React and Material UI. The
 
 <br>
 
-**Live:** [User Management App with Netlify](https://www.example.com)
+**Live:** [User Management App with Netlify](https://personmanagementapp.netlify.app/)
 
 <br>
 
 ## 1. Interface
-![Screenshot-1](docs\images\screenshot-1.png)
+![Screenshot-1](./docs/images/screenshot-1.png)
 
 <br>
 
@@ -38,13 +38,13 @@ This application is developed following the MVVM (Model-View-ViewModel) architec
 - View: Represents the UI (User Interface).
 - ViewModel: Acts as a bridge between the Model and View, handling UI-specific logic and data binding.
 
-1. Model includes:
+1. **Model includes:**
     1. `User.js`: A data model for each 'user' in the `db.json` file that simulates the database.
     2. `data\db.json`: Contact data in JSON format simulating a database.
 
 <br>
 
-2. ViewModels includes:
+2. **ViewModels includes:**
     1. `Modals`
         1. `DeleteModal`: Logic of the modal that gets confirmation from the user for multiple deletions.
         2. `EditModal`: The logic of the `UserForm` modal to update people's information.
@@ -59,17 +59,17 @@ This application is developed following the MVVM (Model-View-ViewModel) architec
 
 <br>
 
-3. Context includes:
+3. **Context includes:**
     1. `UserContext.jsx`: For state management.
 
 <br>
 
-4. Hooks includes:
+4. **Hooks includes:**
     1. `useData.jsx`: For sharing state.
 
 <br>
 
-5. utils includes:
+5. **utils includes:**
     1. `checkFormData.js`: In order to identify people on React and to make the application realistic, the elements of the `Users` array must have a unique property. In the context of this application, this property is 'id' representing the username. This function checks whether the username has already been taken on new saves and update operations. 
 
 <br>
@@ -83,16 +83,16 @@ This paragraph is a warning from Material UI's official site. Therefore, in the 
 <br>
 
 ## 6. Other screenshots
-![Screenshot-2](docs\images\screenshot-2.png)
+![Screenshot-2](./docs/images/screenshot-2.png)
 
 <br>
 
-![Screenshot-3](docs\images\screenshot-3.png)
+![Screenshot-3](./docs/images/screenshot-3.png)
 
 <br>
 
-![Screenshot-4](docs\images\screenshot-4.png)
+![Screenshot-4](./docs/images/screenshot-4.png)
 
 <br>
 
-![Screenshot-5](docs\images\screenshot-5.png)
+![Screenshot-5](./docs/images/screenshot-5.png)
