@@ -3,11 +3,14 @@ import useData from '../../../hooks/useData';
 import UserTable from '../../views/UserDatatable/UserTable';
 import DeleteViewModel from '../Modals/DeleteModal/DeleteViewModel';
 import PaginationView from '../../views/UserDatatable/PaginationView';
+import EditViewModal from '../Modals/EditModal/EditViewModal';
 
 function UserTableViewModel() {
   const { users, setUsers, listedUsers } = useData();
 
   const [selectedUsers, setSelectedUsers] = useState([]);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [editedUser, setEditedUser] = useState({});
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isDeleteConfirm, setIsDeleteConfirm] = useState(false);
   const [displayedUsers, setDisplayedUsers] = useState([]);
@@ -71,7 +74,9 @@ function UserTableViewModel() {
   };
 
   const handleEdit = (userId) => {
-    console.log(userId, 'This is edit log');
+    const userToEdit = users.find((user) => user.id === userId);
+    setIsEditModalOpen(true);
+    setEditedUser(userToEdit);
   };
 
   return (
@@ -89,6 +94,13 @@ function UserTableViewModel() {
         listedUsers={listedUsers}
         handlePagination={handlePagination}
       />
+      {isEditModalOpen && (
+        <EditViewModal
+          isEditModalOpen={isEditModalOpen}
+          setIsEditModalOpen={setIsEditModalOpen}
+          editedUser={editedUser}
+        />
+      )}
       {isDeleteModalOpen && (
         <DeleteViewModel
           isDeleteModalOpen={isDeleteModalOpen}

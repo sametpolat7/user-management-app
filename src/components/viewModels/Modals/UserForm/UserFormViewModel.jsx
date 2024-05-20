@@ -20,8 +20,8 @@ function UserFormViewModel({ isAddModalOpen, handleAddModalClose }) {
   const handleSendForm = (event) => {
     event.preventDefault();
 
+    // Username validation
     let isIdTaken = checkFormData(users, formData);
-    console.log(isIdTaken);
 
     if (isIdTaken) {
       setError(true);

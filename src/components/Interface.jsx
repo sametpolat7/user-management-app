@@ -52,7 +52,9 @@ function Interface() {
       const subscribers = users.filter((user) => user.role === 'Subscriber');
       setFilteredUsersByTab(subscribers);
     } else {
-      console.error('Interface');
+      console.error(
+        'Unknown tab value! Please see Interface.jsx and NavbarViewModel.jsx files for checking.'
+      );
     }
   };
 
